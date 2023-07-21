@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookmark</title>
+</head>
+
+<body>
+    <div class="container my-5 d-flex flex-column justify-content-center align-items-center">
+        <h1 class="mb-5">Bookmarker</h1>
+        <div class="BB w-100 px-2 py-3 d-flex flex-column justify-content-center align-items-center">
+            <h2><i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="w-100 fw-bold d-flex flex-column justify-content-center mt-5 mb-3">
+                <label><i class="fa-solid fa-book-bookmark me-3"></i>Site Name</label>
+                <input type="text" id="sitename" class="form-control mt-2" placeholder="Bookmark Name">
+            </div>
+            <div class="w-100 fw-bold d-flex flex-column justify-content-center  mb-3">
+                <label><i class="fa-solid fa-link me-3"></i>Site Name</label>
+                <input type="text" id="link" class="form-control mt-2" placeholder="Website URL">
+            </div>
+            <button class="btn btn-danger px-5" onclick="getINput()">Submit</button>
+        </div>
+        <div class="w-100 my-5">
+            <table class="table text-center bg-white">
+                <thead class="shadow-lg">
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="demo">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

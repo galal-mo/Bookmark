@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F7ECDE;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Pacifico, cursive;
+    color: rgb(53, 46, 40);
+    position: relative;
+    z-index: 2;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0px;
+    bottom: 10px;
+    background-color: rgb(254, 194, 96);
+    transition-property: all;
+    transition-duration: 0.3s;
+    z-index: -1;
+}
+h1:hover::before {
+    height: 50%;
+}
+.bb
+{
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+h2{
+    font-size: 25px;
+    font-family: 'Righteous', cursive;
+    background: -webkit-linear-gradient(#3FA55B, #B2AC49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
