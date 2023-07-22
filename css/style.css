@@ -37,11 +37,21 @@ h1:hover::before {
     border-style: dotted;
     border-color: #352e28;
 }
+/* 
+h2 {
+
+    background: -webkit-linear-gradient(#3FA55B, #B2AC49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
 
 h2 {
     font-size: 25px;
     font-family: 'Righteous', cursive;
-    background: -webkit-linear-gradient(#3FA55B, #B2AC49);
+    background: -webkit-linear-gradient(left, #3FA55B, #B2AC49);
+    background: -o-linear-gradient(right, #3FA55B, #B2AC49);
+    background: -moz-linear-gradient(right, #3FA55B, #B2AC49);
+    background: linear-gradient(to right, #3FA55B, #B2AC49);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
