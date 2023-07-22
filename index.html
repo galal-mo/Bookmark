@@ -16,13 +16,13 @@
         <div class="BB w-100 px-2 py-3 d-flex flex-column justify-content-center align-items-center">
             <h2><i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark"></i>
             </h2>
-            <div class="w-100 fw-bold d-flex flex-column justify-content-center mt-5 mb-3">
+            <div class="w-100 fw-bold d-flex flex-column justify-content-center mt-5 mb-3 inputnamesite">
                 <label><i class="fa-solid fa-book-bookmark me-3"></i>Site Name</label>
-                <input type="text" id="sitename" class="form-control mt-2" placeholder="Bookmark Name">
+                <input onkeyup="check(this.value)" type="text" id="sitename" class="form-control mt-2" placeholder="Bookmark Name">
             </div>
             <div class="w-100 fw-bold d-flex flex-column justify-content-center  mb-3">
                 <label><i class="fa-solid fa-link me-3"></i>Site Name</label>
-                <input type="text" id="link" class="form-control mt-2" placeholder="Website URL">
+                <input onkeyup="checkLink(this.value)" type="text" id="link" class="form-control mt-2" placeholder="Website URL">
             </div>
             <button class="btn btn-danger px-5" onclick="getINput()">Submit</button>
         </div>

@@ -41,7 +41,11 @@ function display(){
 function clear(){
     var prodName=document.getElementById('sitename').value=""
     var prodPrice=document.getElementById('link').value=""
+    document.getElementById("link").classList.remove("is-valid")
+    document.getElementById("sitename").classList.remove("is-valid")
+
 }
+
 function DELETE(index){
     WebsitesArray.splice(index,1)
     
@@ -49,6 +53,30 @@ function DELETE(index){
 
     display()
 }
+
 function visit(index){
     window.open(WebsitesArray[index].Link,"_blank")
 }
+function check(str){
+    var regax=  /[A-Za-z]{3,}/
+    if(regax.test(str)==false)
+    {
+        document.getElementById("sitename").classList.add("is-invalid")
+    }
+    else{
+        document.getElementById("sitename").classList.remove("is-invalid")
+        document.getElementById("sitename").classList.add("is-valid")
+    }
+}   
+
+function checkLink(str){
+    var regax=/^(http(s):\/\/.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/
+    if(regax.test(str)==false)
+    {
+        document.getElementById("link").classList.add("is-invalid")
+    }
+    else{
+        document.getElementById("link").classList.remove("is-invalid")
+        document.getElementById("link").classList.add("is-valid")
+    }
+}   
