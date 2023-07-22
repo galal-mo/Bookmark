@@ -12,20 +12,25 @@ function getINput(){
         name:siteName,
         Link:link
     }
+    if(check(sitetOBJ.name)==true&&checkLink(sitetOBJ.Link)==true){
     WebsitesArray.push(sitetOBJ)
 
     localStorage.setItem('books',JSON.stringify(WebsitesArray))
 
     display()
     clear()
+    }
+    else{
+        window.alert("Invlaid Data")
+    }
 }
 function display(){
     var dis=``
     for(var i=0;i<WebsitesArray.length;i++){
         dis+=`
         <tr>
-        <td>${i+1}</td>
-        <td>${WebsitesArray[i].name}</td>
+        <td class="align-middle">${i+1}</td>
+        <td class="align-middle">${WebsitesArray[i].name}</td>
         <td>
             <button onclick="visit(${i})" class="btn btn-Success"><i class="fa-solid fa-eye me-2"></i>Visit</button>
         </td>
@@ -67,6 +72,7 @@ function check(str){
         document.getElementById("sitename").classList.remove("is-invalid")
         document.getElementById("sitename").classList.add("is-valid")
     }
+    return regax.test(str)
 }   
 
 function checkLink(str){
@@ -79,4 +85,5 @@ function checkLink(str){
         document.getElementById("link").classList.remove("is-invalid")
         document.getElementById("link").classList.add("is-valid")
     }
+    return regax.test(str)
 }   
