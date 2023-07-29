@@ -21,7 +21,8 @@ function getINput(){
     clear()
     }
     else{
-        window.alert("Invlaid Data")
+        swal("Site Name or Url is not valid, Please follow the validation rules", "Site name must contain at least 3 characters , Site URL must be a valid one ", "error");
+
     }
 }
 function display(){
